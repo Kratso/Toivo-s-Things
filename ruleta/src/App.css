@@ -1,32 +1,125 @@
-.App {
+body {
   text-align: center;
+  background-color: #000e1c;
+  height: 100vmin;
+  color: white;
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 20vmin;
   pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    animation: App-logo-spin infinite 5s linear;
   }
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  min-height: 20vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  padding-top: 10px;
 }
 
 .App-link {
   color: #61dafb;
 }
+
+.game-area {
+  display: grid;
+  grid-template-areas: 
+	  ".		.		.		.		.		.		." 	
+	  ".		.		number	number	number	.		."	
+	  ".		.		number	number	number	.		."	
+	  ".		.		number	number	number	.		."	
+	  ".		.		number	number	number	.		."	
+	  ".		.		number	number	number	.		."	
+	  ".		.		.		.		.		.		." 
+	  ".		label	label	.		.		.		."	
+	  ".		inp		inp		inp		.		button	."	
+	  ".		.		.		.		.		.		." 											
+	  ;
+
+
+}
+
+.number-holder {
+	grid-area: number;
+	text-align: center;
+	font-size: 60px;
+}
+
+.roulette-label {
+	grid-area: label;
+}
+
+.roulette-label {
+	width: auto;
+	text-align: left;
+	font-size: xx-large;
+	margin-bottom: 5px;
+}
+
+.roulette-inp {
+	grid-area: inp;
+}
+
+.input {
+	width: 100%;
+	height: 100%;
+	font-size: xx-large;
+	text-align: center;
+}
+
+.roulette-button {
+	grid-area: button;
+}
+
+.button {
+	width: 50px;
+	height: 50px;
+	border-radius: 100%;
+	background-color: #61dafb;
+}
+
+.focus-in-contract {
+	-webkit-animation: focus-in-contract 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: focus-in-contract 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@-webkit-keyframes focus-in-contract {
+	0% {
+	  letter-spacing: 1em;
+	  -webkit-filter: blur(12px);
+			  filter: blur(12px);
+	  opacity: 0;
+	}
+	100% {
+	  -webkit-filter: blur(0px);
+			  filter: blur(0px);
+	  opacity: 1;
+	}
+  }
+  @keyframes focus-in-contract {
+	0% {
+	  letter-spacing: 1em;
+	  -webkit-filter: blur(12px);
+			  filter: blur(12px);
+	  opacity: 0;
+	}
+	100% {
+	  -webkit-filter: blur(0px);
+			  filter: blur(0px);
+	  opacity: 1;
+	}
+  }
+  
 
 @keyframes App-logo-spin {
   from {
